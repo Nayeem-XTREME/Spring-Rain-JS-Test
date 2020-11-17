@@ -1,19 +1,29 @@
 // Link in index.html first
 // Need a slight fix
 
-const money = prompt('Enter the money Arun have to buy chocolate');
-const price = prompt('Enter the price of each chocolate');
+const money = parseInt(prompt('Enter the money Arun have to buy chocolate'));
+const price = parseInt(prompt('Enter the price of each chocolate'));
 
 countChocolate = (x, y) => {
-    let total = x / y;
 
-    let wrapper = total / 3;
+    let chocolate = parseInt(x / y);
+    let wrapperRem = 0;
 
-    // Need a loop here
-    let wrapperLeft = total % 3;
-    total += wrapper;
+    let sum = chocolate;
 
-    return total;
+    while (true) {
+        let curr = chocolate + wrapperRem;
+        chocolate = parseInt(curr / 3);
+        wrapperRem = parseInt(curr % 3);
+
+        sum += chocolate;
+
+        if (chocolate === 0)
+            break;
+    }
+
+    return sum;
+
 }
 
 console.log(`Arun can eat ${countChocolate(money, price)} no. of chocolate`);

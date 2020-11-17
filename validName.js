@@ -11,7 +11,6 @@ isValid = (value) => {
         console.log(`Check if the name has less than 2 or greater than 3 words`);
         return false;
     }
-        
 
     for (x of value) {
 
