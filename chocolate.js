@@ -1,5 +1,4 @@
 // Link in index.html first
-// Need a slight fix
 
 const money = parseInt(prompt('Enter the money Arun have to buy chocolate'));
 const price = parseInt(prompt('Enter the price of each chocolate'));
@@ -14,7 +13,7 @@ countChocolate = (x, y) => {
     while (true) {
         let curr = chocolate + wrapperRem;
         chocolate = parseInt(curr / 3);
-        wrapperRem = parseInt(curr % 3);
+        wrapperRem = curr % 3;
 
         sum += chocolate;
 
