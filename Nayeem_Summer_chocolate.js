@@ -3,7 +3,7 @@
 const money = parseInt(prompt('Enter the money Arun have to buy chocolate'));
 const price = parseInt(prompt('Enter the price of each chocolate'));
 
-countChocolate = (x, y) => {
+const countChocolate = (x, y) => {
 
     let chocolate = parseInt(x / y);
     let wrapperRem = 0;

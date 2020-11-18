@@ -4,7 +4,7 @@ const number = 254688768534;
 
 const value = number.toString();
 
-isEven = (num) => {
+const isEven = (num) => {
     return (num % 2) === 0 ? true : false;
 }
 

@@ -4,7 +4,7 @@ const name = prompt('Enter the name');
 
 const parts = name.split(' ');
 
-isValid = (value) => {
+const isValid = (value) => {
 
     // Check if the name has less than 2 or greater than 3 words
     if (value.length < 2 || value.length > 3) {
@@ -15,7 +15,7 @@ isValid = (value) => {
     for (x of value) {
 
         // If a word begins with lowercase
-        if (x[0] === x[0].toLowerCase) {
+        if (x[0] === x[0].toLowerCase()) {
             console.log('If a word begins with lowercase');
             return false;
         }
